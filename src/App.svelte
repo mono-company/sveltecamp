@@ -160,7 +160,7 @@
 
 		<Box variant="blue">
 			<h2>What is Svelte anyway?</h2>
-			<p>Svelte is a new web app framework, comparable to Vue.js and React, but with key differences. Want to learn more about Svelte? Check the <a class="link link--blue" href="#">Svelte resources list</a>.</p>
+			<p>Svelte is a new web app framework, comparable to Vue.js and React, but with key differences. Want to learn more about Svelte? Check the <a class="link link--blue" href="https://github.com/ryanatkn/awesome-svelte-resources">Svelte resources list</a>.</p>
 		</Box>
 
 		<Box variant="blue">
