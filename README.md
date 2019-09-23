@@ -8,7 +8,7 @@ https://svelte.camp/
 Install the dependencies...
 
 ```bash
-cd svelte-app
+cd sveltecamp
 npm install
 ```
 
