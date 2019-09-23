@@ -21,6 +21,8 @@
 			twitter: "DriesDeRoeck"
 		}
 	]
+
+	import Box from './Box.svelte';
 </script>
 
 <style>
@@ -49,15 +51,7 @@
 		margin: 0 auto;
 		padding: 1.2rem;
 		font-family: 'Overpass';
-	}
-
-	.header__logo {
-		margin: 56px 0 36px 0;
-	}
-	.header__divider {
-		height: 1px;
-		background: #C4C4C4;
-		opacity: 0.5;
+		color: #444444;
 	}
 
 	main{
@@ -65,23 +59,40 @@
 		justify-content: space-between;
 		margin-top: 56px;
 	}
+	.header__logo {
+		margin: 56px 0 36px 0;
+	}
+
+	.header__divider {
+		height: 1px;
+		background: #C4C4C4;
+		opacity: 0.5;
+	}
 	.column {
 		width: 48%;
 	}
-
-	.information-block {
-		background: #F7FAFD;
+	.list {
 		border-radius: 3px;
 		padding: 24px;
-		margin-bottom: 24px;
+		margin: -16px 0;
+		background: #F7FAFD;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
-	.call-for-speakers {
-		color: white;
-		background: #EC4F27;
-		border-radius: 3px;
-		padding: 24px;
-		margin-bottom: 24px;
+	.list__item {
+		width: 50%;
+	}
+
+	.list__item p {
+		margin: 1rem 0 .5rem 0;
+	}
+
+	.list__item a {
+		color: #444444;
+		text-decoration: underline;
+		opacity: 0.5;
 	}
 
 </style>
@@ -100,39 +111,39 @@
 			<p>Timing to be decided, probably in the coming 2-3 months. Beginning of December seems realistic.</p>
 		</section>
 
-		<section class="information-block">
+		<Box variant="blue">
 			<h2>What is Svelte anyway?</h2>
 			<p>Svelte is a new web app framework, comparable to Vue.js and React, but with key differences. Want to learn more about Svelte? Check the Svelte resources list.</p>
-		</section>
+		</Box>
 
-		<section class="information-block">
-			<h2>What is an "unconference"?</h2>
+		<Box variant="blue">
+			<h2>What is an “unconference”?</h2>
 			<p>A typical conference is usually expensive, and presented as a big deal. An unconference tries to deliver similar value but the rules are different.
 				The value is created by the audience. At the beginning of the day, we will arrange speaker slots on a whiteboard.
 				Inspired by BarCamp.</p>
-		</section>
+		</Box>
+
 	</div>
 
 	<div class="column">
-		<section class="call-for-speakers">
+		<Box variant="orange">
 			<h2>Call for speakers</h2>
 			<p>Do you want to speak about Svelte or a related topic (i.e. front-end frameworks or modern Javascript tooling?). Let us know, so we are sure we at least have some speakers at the event!</p>
-		</section>
+		</Box>
 
-		<section class="information-block">
+		<Box variant="blue">
 			<h2>Interested</h2>
 			<p>Want to get on the list? Tweet to <a href="https://twitter.com/wolfr_2">@wolfr_2</a>.</p>
+		</Box>
 
-			<ul>
+		<ul class="list">
 			{#each interested as interestedPerson}
-				<li>
-					{interestedPerson.name},
+				<li class="list__item">
+					<p>{interestedPerson.name}</p>
 					<a href="https://twitter.com/{interestedPerson.twitter}">@{interestedPerson.twitter}</a>
-					{#if interestedPerson.location}, {interestedPerson.location}{/if}
 				</li>
 			{/each}
-			</ul>
-		</section>
+		</ul>
 	</div>
 
 </main>
