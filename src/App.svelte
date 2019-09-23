@@ -19,6 +19,18 @@
 		{
 			name: "Dries De Roeck",
 			twitter: "DriesDeRoeck"
+		},
+		{
+			name: "Jan De Wilde",
+			twitter: "Mr_Jean"
+		},
+		{
+			name: "Olivier Van Biervliet",
+			twitter: "Ovan"
+		},
+		{
+			name: "Jeremy Swinnen",
+			twitter: "Jerreswinnen"
 		}
 	]
 
@@ -63,18 +75,25 @@
 		margin: 56px 0 36px 0;
 	}
 
-	.header__divider {
+	.divider {
 		height: 1px;
 		background: #C4C4C4;
 		opacity: 0.5;
+	}
+
+	.footer__content {
+		display: flex;
+		justify-content: space-between;
+		margin: 24px 0;
+		color: #444444;
 	}
 	.column {
 		width: 48%;
 	}
 	.list {
+		padding: 0;
+		margin:0;
 		border-radius: 3px;
-		padding: 24px;
-		margin: -16px 0;
 		background: #F7FAFD;
 		list-style: none;
 		display: flex;
@@ -89,17 +108,45 @@
 		margin: 1rem 0 .5rem 0;
 	}
 
-	.list__item a {
-		color: #444444;
+	.link {
 		text-decoration: underline;
+	}
+
+	.link--blue {
+		color: #63B1F9;
+	}
+
+	.link--grey {
+		color: #444444;
 		opacity: 0.5;
+	}
+
+	section {
+		margin-bottom: 24px;
+	}
+
+	@media only screen and (max-width: 960px) {
+		main {
+			flex-wrap: wrap;
+
+		}
+
+		.column {
+			width: 100% !important;
+		}
+	}
+
+	@media only screen and (max-width: 650px) {
+		.footer__content {
+			flex-direction: column;
+		}
 	}
 
 </style>
 
 <header class="header">
 	<img class="header__logo" src="./assets/images/logo.svg" alt="Svelte camp logo">
-	<div class="header__divider"></div>
+	<div class="divider"></div>
 </header>
 
 <main>
@@ -113,14 +160,14 @@
 
 		<Box variant="blue">
 			<h2>What is Svelte anyway?</h2>
-			<p>Svelte is a new web app framework, comparable to Vue.js and React, but with key differences. Want to learn more about Svelte? Check the Svelte resources list.</p>
+			<p>Svelte is a new web app framework, comparable to Vue.js and React, but with key differences. Want to learn more about Svelte? Check the <a class="link link--blue" href="#">Svelte resources list</a>.</p>
 		</Box>
 
 		<Box variant="blue">
 			<h2>What is an “unconference”?</h2>
-			<p>A typical conference is usually expensive, and presented as a big deal. An unconference tries to deliver similar value but the rules are different.
-				The value is created by the audience. At the beginning of the day, we will arrange speaker slots on a whiteboard.
-				Inspired by BarCamp.</p>
+			<p>A typical conference is usually expensive, and presented as a big deal. An unconference tries to deliver similar value but the rules are different.</p>
+			<p>The value is created by the audience. At the beginning of the day, we will arrange speaker slots on a whiteboard.</p>
+			<p>Inspired by <a class="link link--blue" href="http://barcamp.org/w/page/405173/TheRulesOfBarCamp">BarCamp</a>.</p>
 		</Box>
 
 	</div>
@@ -133,17 +180,28 @@
 
 		<Box variant="blue">
 			<h2>Interested</h2>
-			<p>Want to get on the list? Tweet to <a href="https://twitter.com/wolfr_2">@wolfr_2</a>.</p>
-		</Box>
+			<p>Want to get on the list? Tweet to <a class="link link--blue" href="https://twitter.com/wolfr_2">@wolfr_2</a>.</p>
 
-		<ul class="list">
+			<div class="divider"></div>
+
+			<ul class="list">
 			{#each interested as interestedPerson}
 				<li class="list__item">
 					<p>{interestedPerson.name}</p>
-					<a href="https://twitter.com/{interestedPerson.twitter}">@{interestedPerson.twitter}</a>
+					<a class="link link--grey" href="https://twitter.com/{interestedPerson.twitter}">@{interestedPerson.twitter}</a>
 				</li>
 			{/each}
-		</ul>
+			</ul>
+		</Box>
+
 	</div>
 
 </main>
+
+<footer>
+	<div class="divider"></div>
+	<div class="footer__content">
+		<p>A <a class="link link--grey" href="https://mono.company">Mono</a> initiative.</p>
+		<p>Want to organise a local meetup? <a class="link link--grey" href="https://github.com/monocompany2/sveltecamp">Fork this repo.</a></p>
+	</div>
+</footer>
