@@ -69,10 +69,10 @@
 	main{
 		display: flex;
 		justify-content: space-between;
-		margin-top: 56px;
+		margin-top: 3.5rem;
 	}
 	.header__logo {
-		margin: 56px 0 36px 0;
+		margin: 3.5rem 0 2.25rem 0;
 	}
 
 	.divider {
@@ -84,7 +84,7 @@
 	.footer__content {
 		display: flex;
 		justify-content: space-between;
-		margin: 24px 0;
+		margin: 1.5rem 0;
 		color: #444444;
 	}
 	.column {
@@ -122,7 +122,7 @@
 	}
 
 	section {
-		margin-bottom: 24px;
+		margin-bottom: 1.5rem;
 	}
 
 	@media only screen and (max-width: 960px) {
