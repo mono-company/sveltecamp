@@ -3,6 +3,7 @@ https://svelte.camp/
 ## Development
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
+```git clone git@github.com:mono-company/sveltecamp.git```
 
 Install the dependencies...
 
