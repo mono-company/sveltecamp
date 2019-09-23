@@ -2,13 +2,11 @@
 	let interested = [
 		{
 			name: "Johan Ronsse",
-			twitter: "wolfr_2",
-			location: "Antwerp"
+			twitter: "wolfr_2"
 		},
 		{
 			name: "Sebastian De Deyne",
-			twitter: "sebdedeyne",
-			location: "Ghent"
+			twitter: "sebdedeyne"
 		},
 		{
 			name: "Pieter De vriendt",
@@ -26,40 +24,115 @@
 </script>
 
 <style>
+	/* overpass-regular - latin */
+	@font-face {
+	font-family: 'Overpass';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Overpass Regular'), local('Overpass-Regular'),
+		url('./assets/fonts/overpass-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('./assets/fonts/overpass-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	}
+	/* overpass-600 - latin */
+	@font-face {
+	font-family: 'Overpass';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Overpass SemiBold'), local('Overpass-SemiBold'),
+		url('./assets/fonts/overpass-v4-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('./assets/fonts/overpass-v4-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	}
+
 	:global(body) {
 		line-height: 1.5;
-		max-width: 60rem;
+		max-width: 70rem;
 		margin: 0 auto;
 		padding: 1.2rem;
+		font-family: 'Overpass';
 	}
+
+	.header__logo {
+		margin: 56px 0 36px 0;
+	}
+	.header__divider {
+		height: 1px;
+		background: #C4C4C4;
+		opacity: 0.5;
+	}
+
+	main{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 56px;
+	}
+	.column {
+		width: 48%;
+	}
+
+	.information-block {
+		background: #F7FAFD;
+		border-radius: 3px;
+		padding: 24px;
+		margin-bottom: 24px;
+	}
+
+	.call-for-speakers {
+		color: white;
+		background: #EC4F27;
+		border-radius: 3px;
+		padding: 24px;
+		margin-bottom: 24px;
+	}
+
 </style>
 
-<h1>Svelte Camp BE🇧🇪</h1>
+<header class="header">
+	<img class="header__logo" src="./assets/images/logo.svg" alt="Svelte camp logo">
+	<div class="header__divider"></div>
+</header>
 
-<p>
-	A Barcamp style event in Belgium.
-</p>
-<p>
-	Let's learn about Svelte through some presentations and some coding together. (A bit like the Jekyll camp I organized quite some time ago)
-</p>
-<p>
-	Location to be decided, but probably a classroom or shared office in Ghent or Antwerp. If you are a school or have a location and interested in hosting this event, get in touch!</p>
-<p>
-	Timing to be decided, probably in the coming 2-3 months. Beginning of December seems realistic.
-</p>
+<main>
+	<div class="column">
+		<section>
+			<p>A Barcamp style event in Belgium.</p>
+			<p>Let's learn about Svelte through some presentations and some coding together. (A bit like the Jekyll camp I organized quite some time ago)</p>
+			<p>Location to be decided, but probably a classroom or shared office in Ghent or Antwerp. If you are a school or have a location and interested in hosting this event, get in touch!</p>
+			<p>Timing to be decided, probably in the coming 2-3 months. Beginning of December seems realistic.</p>
+		</section>
 
-<h2>
-	Interested:
-</h2>
+		<section class="information-block">
+			<h2>What is Svelte anyway?</h2>
+			<p>Svelte is a new web app framework, comparable to Vue.js and React, but with key differences. Want to learn more about Svelte? Check the Svelte resources list.</p>
+		</section>
 
-<ul>
-{#each interested as interestedPerson}
-	<li>
-		{interestedPerson.name},
-		<a href="https://twitter.com/{interestedPerson.twitter}">@{interestedPerson.twitter}</a>
-		{#if interestedPerson.location}, {interestedPerson.location}{/if}
-	</li>
-{/each}
-</ul>
+		<section class="information-block">
+			<h2>What is an "unconference"?</h2>
+			<p>A typical conference is usually expensive, and presented as a big deal. An unconference tries to deliver similar value but the rules are different.
+				The value is created by the audience. At the beginning of the day, we will arrange speaker slots on a whiteboard.
+				Inspired by BarCamp.</p>
+		</section>
+	</div>
 
-<p>Want to get on the list? Tweet to <a href="https://twitter.com/wolfr_2">@wolfr_2</a>.</p>
+	<div class="column">
+		<section class="call-for-speakers">
+			<h2>Call for speakers</h2>
+			<p>Do you want to speak about Svelte or a related topic (i.e. front-end frameworks or modern Javascript tooling?). Let us know, so we are sure we at least have some speakers at the event!</p>
+		</section>
+
+		<section class="information-block">
+			<h2>Interested</h2>
+			<p>Want to get on the list? Tweet to <a href="https://twitter.com/wolfr_2">@wolfr_2</a>.</p>
+
+			<ul>
+			{#each interested as interestedPerson}
+				<li>
+					{interestedPerson.name},
+					<a href="https://twitter.com/{interestedPerson.twitter}">@{interestedPerson.twitter}</a>
+					{#if interestedPerson.location}, {interestedPerson.location}{/if}
+				</li>
+			{/each}
+			</ul>
+		</section>
+	</div>
+
+</main>
