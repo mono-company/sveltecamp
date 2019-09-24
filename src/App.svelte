@@ -66,6 +66,14 @@
 		color: #444444;
 	}
 
+	h2 {
+		margin-top: .5rem;
+	}
+
+	p {
+		margin-bottom: .5rem;
+	}
+
 	main {
 		display: flex;
 		justify-content: space-between;
@@ -80,6 +88,7 @@
 		height: 1px;
 		background: #C4C4C4;
 		opacity: 0.5;
+		margin: 1rem 0 0 0;
 	}
 
 	.footer__content {
@@ -154,7 +163,7 @@
 	<div class="column">
 		<section>
 			<p>A Barcamp style event in Belgium.</p>
-			<p>Let's learn about Svelte through some presentations and some coding together. (A bit like the Jekyll camp I organized quite some time ago)</p>
+			<p>Let's learn about <a class="link link--blue" href="https://svelte.dev/">Svelte</a> through some presentations and some coding together.</p>
 			<p>Location to be decided, but probably a classroom or shared office in Ghent or Antwerp. If you are a school or have a location and interested in hosting this event, get in touch!</p>
 			<p>Timing to be decided, probably in the coming 2-3 months. Beginning of December seems realistic.</p>
 		</section>
@@ -180,6 +189,11 @@
 		</Box>
 
 		<Box variant="blue">
+			<h2>What you should know to join</h2>
+			<p>The event will be beginner friendly. Talks will be held in English. If you are familiar with HTML and some programming concepts like loops and objects you will be fine.</p>
+		</Box>
+
+		<Box variant="blue">
 			<h2>Interested</h2>
 			<p>Want to get on the list? Tweet to <a class="link link--blue" href="https://twitter.com/wolfr_2">@wolfr_2</a>.</p>
 
@@ -202,7 +216,7 @@
 <footer>
 	<div class="divider"></div>
 	<div class="footer__content">
-		<p>A <a class="link link--grey" href="https://mono.company">Mono</a> initiative.</p>
-		<p>Want to organise a local meetup? <a class="link link--grey" href="https://github.com/monocompany/sveltecamp">Fork this repo.</a></p>
+		<p>A <a class="link link--grey" href="https://mono.company">Mono Company</a> initiative.</p>
+		<p>Want to organise a local meetup? <a class="link link--grey" href="https://github.com/mono-company/sveltecamp">Fork this repo.</a></p>
 	</div>
 </footer>
