@@ -19,3 +19,10 @@ npm run dev
 ```
 
 Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+
+## Your own event
+Feel free to use the source code of this website for your own Svelte event
+
+
+## License
+MIT
