@@ -30,7 +30,7 @@
 		},
 		{
 			name: "Jeremy Swinnen",
-			twitter: "Jerreswinnen"
+			twitter: "Jereswinnen"
 		}
 	]
 
@@ -66,13 +66,14 @@
 		color: #444444;
 	}
 
-	main{
+	main {
 		display: flex;
 		justify-content: space-between;
 		margin-top: 3.5rem;
 	}
 	.header__logo {
-		margin: 3.5rem 0 2.25rem 0;
+		margin: 2.5rem 0 2.25rem 0;
+		max-width: 100%;
 	}
 
 	.divider {
@@ -202,6 +203,6 @@
 	<div class="divider"></div>
 	<div class="footer__content">
 		<p>A <a class="link link--grey" href="https://mono.company">Mono</a> initiative.</p>
-		<p>Want to organise a local meetup? <a class="link link--grey" href="https://github.com/monocompany2/sveltecamp">Fork this repo.</a></p>
+		<p>Want to organise a local meetup? <a class="link link--grey" href="https://github.com/monocompany/sveltecamp">Fork this repo.</a></p>
 	</div>
 </footer>
