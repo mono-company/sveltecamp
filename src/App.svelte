@@ -31,18 +31,6 @@
         {
             name: "Jeremy Swinnen",
             twitter: "Jerreswinnen"
-        },
-        {
-            name: "Pieter Beulque",
-            twitter: "pieterbeulque"
-        },
-        {
-            name: "Hidde De Vries",
-            twitter: "hdv"
-        },
-        {
-            name: "Sam Bellen",
-            twitter: "sambego"
         }
     ]
 
@@ -53,22 +41,22 @@
 
   /* overpass-regular - latin */
   @font-face {
-    font-family: 'Overpass';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Overpass Regular'), local('Overpass-Regular'),
-      url('./assets/fonts/overpass-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('./assets/fonts/overpass-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Overpass Regular'), local('Overpass-Regular'),
+    url('./assets/fonts/overpass-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('./assets/fonts/overpass-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
   /* overpass-600 - latin */
   @font-face {
-    font-family: 'Overpass';
-    font-style: normal;
-    font-weight: 600;
-    src: local('Overpass SemiBold'), local('Overpass-SemiBold'),
-      url('./assets/fonts/overpass-v4-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('./assets/fonts/overpass-v4-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Overpass SemiBold'), local('Overpass-SemiBold'),
+    url('./assets/fonts/overpass-v4-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('./assets/fonts/overpass-v4-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
   :global(body) {
@@ -169,8 +157,8 @@
 <main>
     <div class="column">
         <section>
-            <p>A Barcamp style event in Belgium.</p>
-            <p>Let's learn about Svelte through some presentations and some coding together. (A bit like the Jekyll camp I organized quite some time ago)</p>
+            <h2>A Barcamp style Svelte event in Belgium.</h2>
+            <p>Let's learn about <a class="link link--blue" href="https://svelte.dev/">Svelte</a> through some presentations and some coding together.</p>
             <p>Location to be decided, but probably a classroom or shared office in Ghent or Antwerp. If you are a school or have a location and interested in hosting this event, get in touch!</p>
             <p>Timing to be decided, probably in the coming 2-3 months. Beginning of December seems realistic.</p>
         </section>
@@ -194,7 +182,10 @@
             <h2>Call for speakers</h2>
             <p>Do you want to speak about Svelte or a related topic (i.e. front-end frameworks or modern Javascript tooling?). Let us know, so we are sure we at least have some speakers at the event!</p>
         </Box>
-
+        <Box variant="blue">
+            <h2>What you should know to join</h2>
+            <p>The event will be beginner friendly. Talks will be held in English. If you are familiar with HTML and some programming concepts like loops and objects you will be fine.</p>
+        </Box>
         <Box variant="blue">
             <h2>Interested</h2>
             <p>Want to get on the list? Tweet to <a class="link link--blue" href="https://twitter.com/wolfr_2">@wolfr_2</a>.</p>
